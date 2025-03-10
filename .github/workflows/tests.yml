@@ -1,0 +1,38 @@
+name: Lint and Tests
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for changes
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          python -m pip install -r requirements.txt
+          echo "$VIRTUAL_ENV/bin" >> $GITHUB_PATH
+          echo "VIRTUAL_ENV=$VIRTUAL_ENV" >> $GITHUB_ENV
+
+      - name: Lint and format check with ruff
+        run: |
+          ruff check --output-format=github
+          ruff format --check
+
+      - name: Check imports with isort
+        run: isort --check-only --profile black .
+
+      - name: Run tests
+        run: python -m unittest
