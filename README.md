@@ -1,5 +1,6 @@
 # Monte Carlo Tree Search (MCTS) for Tic-Tac-Toe 
-[![Run Tests](https://github.com/PyG4ng/mcts-tic-tac-toe/actions/workflows/tests.yml/badge.svg)](https://github.com/PyG4ng/mcts-tic-tac-toe/actions/workflows/tests.yml) 
+[![Run Tests](https://github.com/PyG4ng/mcts-tic-tac-toe/actions/workflows/tests.yml/badge.svg)](https://github.com/PyG4ng/mcts-tic-tac-toe/actions/workflows/tests.yml)&ensp; 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A lightweight implementation of Monte Carlo Tree Search (MCTS) for a Tic-Tac-Toe game.
 

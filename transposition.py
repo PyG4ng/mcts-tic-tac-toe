@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from tick_tack_toe import TicTacToeState
+from tic_tac_toe import TicTacToeState
 
 
 @dataclass

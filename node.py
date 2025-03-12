@@ -1,7 +1,7 @@
 import math
 import random
 
-from tick_tack_toe import TicTacToeState
+from tic_tac_toe import TicTacToeState
 from transposition import transposition_ctx
 
 

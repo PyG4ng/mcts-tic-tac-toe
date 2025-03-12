@@ -4,7 +4,7 @@ import numpy as np
 
 from mcts import mcts_search
 from node import MCTSNode
-from tick_tack_toe import TicTacToeState
+from tic_tac_toe import TicTacToeState
 from transposition import transposition_ctx
 
 
